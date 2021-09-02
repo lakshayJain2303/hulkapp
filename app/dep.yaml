@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: lakshay-app
+  name: lakshay-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lakshay-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: lakshay-app
+    spec:
+      containers:
+      - image: lakshayjain/bagisto:lakshay
+        name: bagisto
+        resources: {}
+status: {}
